@@ -13,6 +13,7 @@ class Scraper
   end
 
   def get_courses
+    get_page.css(".post").map {|e| e.css("h2").text}
   end
 
   def make_courses
